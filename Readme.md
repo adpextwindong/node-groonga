@@ -2,11 +2,13 @@
 # node-groonga
 
   groonga interface for Node.js
+  
+  This repo is a port of hideo55/node-groonga to ESModule for my convenience. 
 
 ## Tutorial
 
-	var Groonga = require(‘groonga’).Groonga;
-	var groonga = new Groonga({
+	import Groonga from ‘groonga’;
+	let groonga = new Groonga({
 		host : ‘example.com’,
 		port : 10041,
 		resultObjectMapper : ‘default’
@@ -16,7 +18,7 @@
 		match_columns : ‘title’,
 		query : ‘foo’
 	},function(err,res){
-		var items = res.getItems();
+		let items = res.getItems();
 		//do something
 	});
 	
